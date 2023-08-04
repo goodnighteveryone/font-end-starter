@@ -1,0 +1,35 @@
+.card {
+  height: calc(100% - 1.6px);
+  .el-card__body {
+    height: calc(100% - 40px);
+  }
+  .table {
+    height: 85%;
+    min-height: 400px;
+    :deep(el-table__inner-wrapper) {
+      height: inherit;
+    }
+    overflow: auto;
+    .member-operate {
+      .el-button {
+        display: inline-block;
+        padding: 0;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.form {
+  width: 100%;
+  height: calc(100% - 40px);
+}
+.search {
+  height: 5%;
+  min-height: 30px;
+}
+.bottom-pagination {
+  height: 10%;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,38 @@
+// 常用尺寸
+$space-xs: 8px;
+$space-sm: 16px;
+$space: 24px;
+$space-lg: 32px;
+$radius-xs: 4px;
+$radius: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+// 常用配色
+$white: #fff;
+$black: #000;
+$blue: #3b82f6;
+$red: #ef4444;
+$yellow: #f59e0b;
+$green: #42b983;
+$gray: #9ca3af;
+$disable: rgba(0, 0, 0, 0.25);
+$bg: #074b7f;
+$active-bg: #0d5990;
+$main-bg: #f9f9f9;
+
+// 常用元素色
+$brand: var($green);
+// $bg: #f8f8f8;
+$text: #374151;
+$tips: var($gray);
+$border: var($gray);
+$mask: rgba(0, 0, 0, 0.7);
+$hover: var($brand);
+
+// 组件css变量
+$topHeight: 40px;
+
+.dark {
+  $dark-bg: #181818;
+  $dark-text: #e5e7eb;
+}
