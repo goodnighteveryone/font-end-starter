@@ -8,7 +8,7 @@
     "jsx": "preserve",
     "sourceMap": true,
     "baseUrl": "./",
-    "types": ["node", "streamsaver"],
+    "types": ["node"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "skipLibCheck": true,

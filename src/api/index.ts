@@ -34,13 +34,11 @@ axios.interceptors.request.use(
 // 响应拦截器
 axios.interceptors.response.use(
   (response: AxiosResponse | any): AxiosResponse | any => {
-    if (!response) return Promise.reject({ msg: 'No response!' })
     // if (typeof response.data.data === 'string') {
     //   response.data.data = DecryptData(response.data.data)
     //   response.data.data = JSON.parse(response.data.data)
     // }
-    const { status, data } = response
-    if (status !== 200) return Promise.reject({ response })
+    const { data } = response
     const { code, msg } = data
     if (code !== 200) {
       ElMessage.error({ message: msg })
@@ -49,6 +47,7 @@ axios.interceptors.response.use(
     return Promise.resolve(data)
   },
   (error: any): any => {
+    if (!error) return Promise.reject({ msg: 'No response!' })
     console.log('error', error)
     const res = error
     const code = res && res.code
