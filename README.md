@@ -1,12 +1,3 @@
-# auditor_web
+# font-end-starter
 
-审计系统前端
-
-
-```
-cd existing_repo
-git remote add origin git@192.168.1.200:Informationsecurityteam/auditor_web.git
-git pull
-git branch -M main
-git push -uf origin main
-```
+vue3 + typescript + element-plus + axios + vuex + vue-router + sass 模板
