@@ -77,24 +77,3 @@ body,
   background: rgba(0, 0, 0, 0.15);
   transition: color 0.2s ease;
 }
-
-.config {
-  .config-header {
-    // position: relative;
-    margin-bottom: 10px;
-    .title {
-      display: inline-block;
-      font-size: 25px;
-    }
-    .button {
-      // position: absolute;
-      // right: 0;
-      // top: 0;
-      // bottom: 0;
-      // margin: auto;
-    }
-  }
-  .content {
-    margin-left: 20px;
-  }
-}

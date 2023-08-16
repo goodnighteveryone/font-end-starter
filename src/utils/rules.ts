@@ -1,8 +1,9 @@
 // 密码校验
 const validatePassword = (rule: any, value: string, callback: Function) => {
-  const numRegex = new RegExp(/^[0-9a-zA-Z_]{8,}$/)
-  if (!numRegex.test(value)) {
-    callback(new Error('请输入8位以上的数字、字母、下划线组成的密码！'))
+  const regex =
+    /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d0-9]{8,}|(?=.*[A-Za-z])(?=.*_)[A-Za-z\d_]{8,}|(?=.*\d)(?=.*_)[0-9\d_]{8,}$/
+  if (!regex.test(value)) {
+    callback(new Error('请输入8位以上的数字、字母或下划线组成的密码！'))
   } else {
     callback()
   }

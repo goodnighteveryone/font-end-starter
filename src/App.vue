@@ -1,7 +1,5 @@
 <template>
-  <el-config-provider :locale="zhCn" v-if="isShow">
-    <router-view />
-  </el-config-provider>
+  <router-view />
 </template>
 
 <script setup lang="ts">
@@ -11,12 +9,12 @@ const handleBeforeUnload = () => {
   isShow = false
   console.log('beforeunload')
 }
-onMounted(() => {
-  window.addEventListener('beforeunload', handleBeforeUnload)
-})
-onBeforeMount(() => {
-  window.removeEventListener('beforeunload', handleBeforeUnload)
-})
+// onMounted(() => {
+//   window.addEventListener('beforeunload', handleBeforeUnload)
+// })
+// onBeforeMount(() => {
+//   window.removeEventListener('beforeunload', handleBeforeUnload)
+// })
 </script>
 
 <style scoped></style>

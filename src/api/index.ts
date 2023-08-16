@@ -11,7 +11,6 @@ declare module 'axios' {
   }
 }
 
-// axios.defaults.baseURL = 'http://127.0.0.1:4523/m1/2677210-0-default'
 axios.defaults.baseURL = API_BASE_URL
 axios.defaults.timeout = 10 * 1000
 axios.defaults.withCredentials = true
