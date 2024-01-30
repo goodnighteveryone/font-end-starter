@@ -32,5 +32,3 @@ const svgClass = computed(() => {
   return 'svg-icon'
 })
 </script>
-
-##
