@@ -21,15 +21,15 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('@/views/login/Index.vue'),
+    component: () => import('@/views/Login/index.vue'),
     meta: {
       title: '登录',
     },
   },
-  {
-    path: '/:catchAll(.*)',
-    redirect: '/404',
-  },
+  // {
+  //   path: '/:catchAll(.*)',
+  //   redirect: '/404',
+  // },
 ]
 
 export default routes

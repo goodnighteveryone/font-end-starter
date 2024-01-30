@@ -86,6 +86,7 @@ export default defineConfig(({ mode }) => {
       alias: {
         '@': sourceDir,
       },
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.vue'],
     },
 
     css: {

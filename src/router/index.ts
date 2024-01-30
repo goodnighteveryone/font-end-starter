@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import progress from '@bassist/progress'
 import routes from './routes'
-import { APP_NAME, ROLE_HOME_MAP } from '@/constants'
+import { APP_NAME } from '@/constants'
 
 progress.configure({ showSpinner: false })
 progress.setColor('$brand')
@@ -16,27 +16,26 @@ const router = createRouter({
 })
 router.beforeEach((to, from, next) => {
   progress.start()
-  const token = sessionStorage.getItem('TOKEN')
-  if (to.path === '/login') {
-    next()
-  } else if (to.path === '/404' || to.path === '/403') {
-    if (!token) next('/login')
-    else next()
-  } else {
-    if (!token) next('/login')
-    const requiredRole: string[] = to.meta.requiredRole as string[]
-    const { role, auth } = JSON.parse(
-      sessionStorage.getItem('USERINFO') as string
-    )
-    // const homePath = auth === 'root' ? ROLE_HOME_MAP[auth] : ROLE_HOME_MAP[role]
-    if (token && !requiredRole.includes(role) && !requiredRole.includes(auth)) {
-      // ElMessage.error('权限不足')
-      next('/403')
-    } else next()
-    // const token = sessionStorage.getItem('TOKEN')
-    // token ? next() : next('/login')
-  }
-  progress.done()
+  // const token = sessionStorage.getItem('TOKEN')
+  // if (to.path === '/login') {
+  //   next()
+  // } else if (to.path === '/404' || to.path === '/403') {
+  //   if (!token) next('/login')
+  //   else next()
+  // } else {
+  //   if (!token) next('/login')
+  //   const requiredRole: string[] = to.meta.requiredRole as string[]
+  //   const { role, auth } = JSON.parse(
+  //     sessionStorage.getItem('USERINFO') as string
+  //   )
+  //   // const homePath = auth === 'root' ? ROLE_HOME_MAP[auth] : ROLE_HOME_MAP[role]
+  //   if (token && !requiredRole.includes(role) && !requiredRole.includes(auth)) {
+  //     // ElMessage.error('权限不足')
+  //     next('/403')
+  //   } else next()
+  //   // const token = sessionStorage.getItem('TOKEN')
+  //   // token ? next() : next('/login')
+  // }
 })
 
 router.afterEach((to) => {

@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import '@/styles/layout.scss'
+// import '@/styles/layout.scss'
 import '@/styles/common.scss'
 import '@/styles/element.scss'
 import '@/styles/waves.scss'
