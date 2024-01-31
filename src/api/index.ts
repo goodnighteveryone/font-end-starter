@@ -1,8 +1,4 @@
-import axios, {
-  type AxiosRequestConfig,
-  AxiosResponse,
-  AxiosInstance,
-} from 'axios'
+import axios, { type AxiosRequestConfig, AxiosResponse, AxiosInstance } from 'axios'
 import { ElMessage } from 'element-plus'
 import { usePiniaStore } from '@/stores'
 import { API_BASE_URL } from '@/constants'
@@ -62,4 +58,4 @@ service.interceptors.response.use(
   }
 )
 
-export default axios
+export default service
