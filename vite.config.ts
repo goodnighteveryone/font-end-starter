@@ -47,6 +47,15 @@ export default defineConfig(({ mode }) => {
     },
 
     build: {
+      //生产环境去除log
+      // minify: 'terser',
+      // terserOptions: {
+      //   compress: {
+      //     keep_infinity: true,
+      //     drop_console: true,
+      //     drop_debugger: true,
+      //   },
+      // },
       assetsInlineLimit: 4096,
       cssCodeSplit: true,
       rollupOptions: {

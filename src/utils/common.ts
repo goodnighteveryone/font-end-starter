@@ -1,16 +1,28 @@
-/**
- * @export 生成指定位数的随机密码（数字、字母、下划线）
- * @param {number}length 确定生成的密码位数，默认8位
- * @param {string} chars 随机数种子
- * @returns {string} 返回随机密码
- */
 const generateRandomString = (chars: string, length = 8): string => {
   let result = ''
   for (let i = 0; i < length; i++) {
     const randomIndex = Math.floor(Math.random() * chars.length)
     result += chars.charAt(randomIndex)
   }
+  const regex =
+    /(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d0-9]{8,}|(?=.*[A-Za-z])(?=.*_)[A-Za-z\d_]{8,}|(?=.*\d)(?=.*_)[0-9\d_]{8,}/
+  if (!regex.test(result) && length === 8) {
+    result = insertRandomChar(result, '1')
+    result = insertRandomChar(result, 'a')
+    result = insertRandomChar(result, '_')
+  }
   return result
+}
+
+/**
+ *
+ * @param str 字符串
+ * @param char 要插入的字符
+ * @returns 随机位置
+ */
+const insertRandomChar = (str: string, char: string): string => {
+  const index = Math.floor(Math.random() * (str.length + 1))
+  return str.slice(0, index) + char + str.slice(index)
 }
 
 /**
