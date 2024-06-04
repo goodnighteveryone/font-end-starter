@@ -113,6 +113,7 @@ const debounce = (func: Function, wait: number = 500) => {
     timeout = null
   }
   timeout = setTimeout(() => {
+    clearTimeout(timeout as NodeJS.Timeout)
     timeout = null
     func()
   }, wait)
