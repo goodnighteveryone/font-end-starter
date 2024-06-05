@@ -8,10 +8,6 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/',
-  },
-  {
-    path: '/',
     name: '/',
     component: () => import('@/layout/index.vue'), //布局页
     meta: {
