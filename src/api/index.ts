@@ -13,11 +13,12 @@ declare module 'axios' {
   }
 }
 
+axios.defaults.withCredentials = false
 const customRequest = () => {
   const service: AxiosInstance = axios.create({
     timeout: 10 * 1000,
     baseURL: API_BASE_URL,
-    withCredentials: true,
+    withCredentials: false,
   })
   return service
 }
