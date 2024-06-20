@@ -5,14 +5,6 @@ import { API_BASE_URL } from '@/constants'
 import { DecryptData, EncryptData } from '@/utils/crypto'
 import router from '@/router'
 
-declare module 'axios' {
-  export interface AxiosResponse<T = any> extends Promise<T> {
-    code: number
-    msg: string
-    data: T
-  }
-}
-
 axios.defaults.withCredentials = false
 const customRequest = () => {
   const service: AxiosInstance = axios.create({
