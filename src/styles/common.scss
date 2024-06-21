@@ -5,8 +5,7 @@ body,
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
-    Microsoft YaHei, SimSun, sans-serif;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: transparent;
@@ -76,4 +75,18 @@ body,
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.15);
   transition: color 0.2s ease;
+}
+
+//进度条背景色
+#nprogress .bar {
+  background: $color-primary !important;
+}
+//进度条动画阴影
+#nprogress .peg {
+  box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
+}
+//进度条旋转图标
+#nprogress .spinner .spinner-icon {
+  border-top-color: $color-primary !important;
+  border-left-color: $color-primary !important;
 }
