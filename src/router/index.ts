@@ -4,7 +4,7 @@ import routes from './routes'
 import { APP_NAME } from '@/constants'
 
 progress.configure({ showSpinner: false })
-progress.setColor('$brand')
+progress.setColor('#596fda')
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_DEPLOY_BASE_URL),

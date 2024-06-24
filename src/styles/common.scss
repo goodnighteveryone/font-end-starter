@@ -76,17 +76,3 @@ body,
   background: rgba(0, 0, 0, 0.15);
   transition: color 0.2s ease;
 }
-
-//进度条背景色
-#nprogress .bar {
-  background: $color-primary !important;
-}
-//进度条动画阴影
-#nprogress .peg {
-  box-shadow: 0 0 10px $color-primary, 0 0 5px $color-primary !important;
-}
-//进度条旋转图标
-#nprogress .spinner .spinner-icon {
-  border-top-color: $color-primary !important;
-  border-left-color: $color-primary !important;
-}
