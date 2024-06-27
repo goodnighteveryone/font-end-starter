@@ -1,6 +1,6 @@
 <template>
   <svg :class="svgClass" aria-hidden="true">
-    <use :xlink:href="iconName" :fill="color" />
+    <use :xlink:href="iconName" :fill="color" :width="width" :height="height" />
   </svg>
 </template>
 
@@ -17,6 +17,14 @@ const props = defineProps({
     default: '',
   },
   color: {
+    type: String,
+    default: '',
+  },
+  width: {
+    type: String,
+    default: '',
+  },
+  height: {
     type: String,
     default: '',
   },
