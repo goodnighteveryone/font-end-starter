@@ -119,4 +119,12 @@ const debounce = (func: Function, wait: number = 500) => {
   }, wait)
 }
 
-export { generateRandomString, getNowTime, formatDate, debounce, arrayEqual, objEqualNewOld }
+const isEmpty = (value: string | number | object | Array<any>) => {
+  if (value === '' || value === null || value === undefined) return true
+  if (typeof value === 'string' && value.trim() === '') return true
+  if (typeof value === 'object' && Object.keys(value).length === 0) return true
+  if (Array.isArray(value) && value.length === 0) return true
+  return false
+}
+
+export { generateRandomString, getNowTime, formatDate, debounce, arrayEqual, objEqualNewOld, isEmpty }
